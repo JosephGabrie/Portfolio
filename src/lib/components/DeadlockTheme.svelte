@@ -271,95 +271,66 @@
   {#if activePage === "resume"}
     <div id="resume" class="page active">
       <div class="resume-container">
+        <div class="education-item">
+          <h3>BACHELOR OF Computer Science</h3>
+          <div class="education-meta">
+            Florida International University • 2022 - 2019
+          </div>
+        </div>
         <div class="resume-header">
           <h1>EXPERIENCE</h1>
           <p>DESIGNER • DEVELOPER • DISRUPTOR</p>
         </div>
 
         <div class="resume-section">
-          <h2>PROFESSIONAL HISTORY</h2>
+          <h2>PROJECTS</h2>
 
           <div class="experience-item">
-            <h3>LEAD CREATIVE TECHNOLOGIST</h3>
-            <div class="experience-meta">
-              APEX DIGITAL STUDIO • 2023 - PRESENT
-            </div>
+            <h3>Real Life Translation Engine</h3>
             <ul>
               <li>
-                Architected bold digital experiences for Fortune 500 clients
-                willing to take risks
+                Directed a team of 10 developers in the end-to-end creation of a
+                web-based translation application mimicking Google Translate
+                architecture over a 3-month agile lifecycle.
               </li>
               <li>
-                Pioneered brutalist design approach that increased client
-                engagement by 340%
+                Delivered two core functionalities: a robust text-translation
+                module and an integrated Text-to-Speech (TTS) synthesis feature,
+                improving accessibility and user engagement.
               </li>
+
               <li>
-                Led team of 8 designers and developers in creating award-winning
-                web applications
-              </li>
-              <li>
-                Developed proprietary animation framework used across all
-                company projects
+                Orchestrated architecture and API design, ensuring seamless
+                communication between the translation logic and the audio
+                synthesis output.
               </li>
             </ul>
           </div>
-
           <div class="experience-item">
-            <h3>SENIOR FRONTEND DEVELOPER</h3>
-            <div class="experience-meta">
-              NOIR CREATIVE AGENCY • 2021 - 2023
-            </div>
+            <h3>Low-Bandwidth School Portal</h3>
+            <div class="experience-meta">Svelte + Go</div>
             <ul>
               <li>
-                Built high-performance web applications with focus on
-                experimental UI/UX
+                Engineered a lightweight school management system prioritizing
+                sub-second distinct load times for users in low-bandwidth
+                regions.
               </li>
               <li>
-                Collaborated with design team to push boundaries of web
-                capabilities
+                Solved the challenge of poor connectivity by utilizing Svelte's
+                compiler-based approach to generate minimal JavaScript, making
+                the portal accessible on legacy devices.
               </li>
               <li>
-                Implemented complex animations and 3D graphics using Three.js
-                and WebGL
-              </li>
-              <li>
-                Mentored junior developers in modern JavaScript and creative
-                coding techniques
-              </li>
-            </ul>
-          </div>
-
-          <div class="experience-item">
-            <h3>FREELANCE DESIGNER & DEVELOPER</h3>
-            <div class="experience-meta">INDEPENDENT • 2023 - 2026</div>
-            <ul>
-              <li>
-                Created custom websites and branding for startups and
-                established businesses
-              </li>
-              <li>
-                Specialized in creating, bold and innovative healthcare software
-              </li>
-              <li>
-                Built reputation for delivering projects that exceeded client
-                expectations
-              </li>
-              <li>
-                Developed skills in rapid prototyping and client communication
+                Designed a concurrent API in Go that maximized server
+                throughput, allowing the platform to serve 900 users efficiently
+                on limited hardware.
               </li>
             </ul>
           </div>
         </div>
 
         <div class="resume-section">
-          <h2>IN PROGRESS</h2>
-
-          <div class="education-item">
-            <h3>BACHELOR OF Computer Science</h3>
-            <div class="education-meta">
-              Florida International University • 2022 - 2019
-            </div>
-          </div>
+          <h2>Education</h2>
         </div>
       </div>
     </div>
