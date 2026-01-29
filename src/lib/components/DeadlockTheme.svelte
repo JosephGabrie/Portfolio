@@ -332,6 +332,8 @@
         <div class="resume-section">
           <h2>Education</h2>
         </div>
+        <h3>Florida International University</h3>
+        <div class="education-meta">Bachelor in computer science 2022-2024</div>
       </div>
     </div>
   {/if}
