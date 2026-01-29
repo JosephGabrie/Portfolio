@@ -4,6 +4,34 @@
   import Droppable from "$lib/components/droppable.svelte";
   import DeadlockTheme from "$lib/components/DeadlockTheme.svelte";
 
+  // Svelte Action to inject Giscus script when the div is mounted
+  function loadGiscus(node: HTMLElement) {
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "JosephGabrie/Portfolio");
+    script.setAttribute("data-repo-id", "R_kgDORDq4Yw");
+    script.setAttribute("data-category", "General");
+    script.setAttribute("data-category-id", "DIC_kwDORDq4Y84C1kc8");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", "dark");
+    script.setAttribute("data-lang", "en");
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+
+    node.appendChild(script);
+
+    return {
+      destroy() {
+        // Cleanup if necessary (usually handled by Giscus itself)
+        node.innerHTML = "";
+      },
+    };
+  }
+
   let isDropped = $state(false);
   let isActive = $state(false);
 
@@ -28,13 +56,6 @@
       <header class="header-section">
         <h1 class="name">JOSEPH<br />GABRIE</h1>
         <h2 class="role">FULL STACK DEVELOPER</h2>
-        <div class="status-indicator">
-          <span class="blink">●</span> SYSTEM: UNSTABLE
-        </div>
-      </header>
-
-      <!-- Main Content (Projects/About) -->
-      <main class="content-section">
         <div class="block about">
           <h3><a href="/about" class="hover:underline">// ABOUT</a></h3>
           <p>
@@ -61,6 +82,18 @@
             <a href="https://github.com/JosephGabrie">GITHUB</a>
             <a href="https://www.linkedin.com/in/jgabrie007/">LINKEDIN</a>
           </div>
+        </div>
+
+        <div class="status-indicator">
+          <span class="blink">●</span> SYSTEM: UNSTABLE
+        </div>
+      </header>
+
+      <!-- Main Content (Projects/About) -->
+      <main class="content-section">
+        <div class="block comments-block">
+          <h3>// TRANSMISSIONS</h3>
+          <div class="giscus-wrapper" use:loadGiscus></div>
         </div>
       </main>
 
